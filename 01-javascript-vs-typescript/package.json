@@ -1,0 +1,19 @@
+{
+  "name": "01-javascript-vs-typescript",
+  "version": "1.0.0",
+  "description": "Ce dossier illustre les différences entre JavaScript et TypeScript.",
+  "type": "module",
+  "main": "example.js",
+  "scripts": {
+    "start": "node --loader ts-node/esm example.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

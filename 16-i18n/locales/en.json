@@ -1,0 +1,50 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "products": "Products"
+  },
+  "home": {
+    "welcome": "Welcome to our website",
+    "description": "Discover our products and services"
+  },
+  "products": {
+    "title": "Our products",
+    "search": "Search for a product...",
+    "noResults": "No products found",
+    "addToCart": "Add to cart",
+    "price": "Price: {{price}} €",
+    "items_zero": "No items",
+    "items_one": "{{count}} item",
+    "items_other": "{{count}} items"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "email": "Email address",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "welcomeUser": "Welcome, {{name}}!"
+  },
+  "dates": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "lastUpdate": "Last update: {{date, datetime}}"
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Invalid email",
+    "minLength": "Minimum {{min}} characters"
+  }
+}

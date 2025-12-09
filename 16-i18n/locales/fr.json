@@ -1,0 +1,50 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "products": "Produits"
+  },
+  "home": {
+    "welcome": "Bienvenue sur notre site",
+    "description": "Découvrez nos produits et services"
+  },
+  "products": {
+    "title": "Nos produits",
+    "search": "Rechercher un produit...",
+    "noResults": "Aucun produit trouvé",
+    "addToCart": "Ajouter au panier",
+    "price": "Prix: {{price}} €",
+    "items_zero": "Aucun article",
+    "items_one": "{{count}} article",
+    "items_other": "{{count}} articles"
+  },
+  "auth": {
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "register": "Inscription",
+    "email": "Adresse email",
+    "password": "Mot de passe",
+    "forgotPassword": "Mot de passe oublié ?",
+    "welcomeUser": "Bienvenue, {{name}} !"
+  },
+  "dates": {
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
+    "lastUpdate": "Dernière mise à jour: {{date, datetime}}"
+  },
+  "validation": {
+    "required": "Ce champ est requis",
+    "email": "Email invalide",
+    "minLength": "Minimum {{min}} caractères"
+  }
+}

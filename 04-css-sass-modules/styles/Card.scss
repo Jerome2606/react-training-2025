@@ -1,0 +1,80 @@
+// Card.scss - Composant Card avec SASS
+@import "./variables.scss";
+
+.card {
+  @include card-style;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+
+  // Nesting - header du card
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    margin-bottom: $spacing-md;
+    padding-bottom: $spacing-md;
+    border-bottom: 1px solid rgba($dark, 0.1);
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    font-weight: 700;
+    color: $secondary;
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-size: $font-size-sm;
+    color: rgba($secondary, 0.6);
+    margin: 0;
+  }
+
+  // Body
+  &__body {
+    color: $secondary;
+    line-height: 1.6;
+  }
+
+  // Footer
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: $spacing-sm;
+    margin-top: $spacing-lg;
+    padding-top: $spacing-md;
+    border-top: 1px solid rgba($dark, 0.1);
+  }
+
+  // Variantes
+  &--primary {
+    background: $primary;
+    color: $secondary;
+
+    .card__title,
+    .card__body {
+      color: $secondary;
+    }
+  }
+
+  &--dark {
+    background: $dark;
+    color: $light;
+
+    .card__title {
+      color: $primary;
+    }
+
+    .card__body {
+      color: rgba($light, 0.8);
+    }
+  }
+
+  // Responsive
+  @include responsive(md) {
+    padding: $spacing-xl;
+  }
+}

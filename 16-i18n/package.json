@@ -1,0 +1,16 @@
+{
+  "name": "16-i18n",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "react-i18next": "^15.2.0",
+    "i18next": "^23.4.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,39 @@
+/* Button.module.css - CSS Module avec isolation automatique */
+
+.button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.primary {
+  background-color: #61dafb;
+  color: #20232a;
+}
+
+.primary:hover {
+  background-color: #4fa8c7;
+  transform: translateY(-2px);
+}
+
+.secondary {
+  background-color: transparent;
+  color: #61dafb;
+  border: 2px solid #61dafb;
+}
+
+.secondary:hover {
+  background-color: rgba(97, 218, 251, 0.1);
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Les classes sont automatiquement scopées */
+/* .button devient .Button_button__x7Ks2 après compilation */
