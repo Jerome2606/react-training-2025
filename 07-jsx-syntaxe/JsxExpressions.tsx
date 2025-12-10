@@ -173,7 +173,7 @@ const FilteredList = () => {
           checked={showExpensive}
           onChange={(e) => setShowExpensive(e.target.checked)}
         />
-        Afficher seulement les produits > 500€
+        Afficher seulement les produits &gt; 500€
       </label>
 
       {filteredProducts.length === 0 ? (

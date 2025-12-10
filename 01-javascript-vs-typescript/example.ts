@@ -23,6 +23,8 @@ console.log(greetTs(userTs));
 // ❌ Erreur de compilation:
 //greetTs({ name: "Bob" }); // Property 'age' is missing
 
+//userTs.
+
 // Interface pour les items du panier
 interface CartItem {
   name: string;
@@ -58,10 +60,12 @@ const employee: Employee = {
 
 // Generics
 function getFirst<T>(arr: T[]): T | undefined {
-  return arr[0];
+  return arr ? arr[0] : undefined;
 }
 
 const firstNumber = getFirst([1, 2, 3]); // Type: number | undefined
 const firstString = getFirst(["a", "b"]); // Type: string | undefined
+const firstEmpty = getFirst([]); // Type: empty | undefined
+const firstUndefined = getFirst(undefined); // Type: undefined
 
-console.log({ employee, firstNumber, firstString });
+console.log({ employee, firstNumber, firstString, firstEmpty, firstUndefined });

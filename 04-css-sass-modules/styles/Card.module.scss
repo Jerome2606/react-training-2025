@@ -1,0 +1,88 @@
+// Card.module.scss - Approche HYBRIDE : SASS + CSS Modules
+// Import des variables/mixins SASS globaux
+@import "./variables.scss";
+
+// Toutes les classes ci-dessous sont automatiquement scopées (CSS Modules)
+// .card devient .Card_card__x7Ks2 après compilation
+
+.card {
+  // Utilisation du mixin SASS global
+  @include card-style;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+
+  // Styles locaux spécifiques à ce composant
+  // Encapsulés automatiquement grâce au CSS Module
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md; // Variable SASS globale
+  margin-bottom: $spacing-md;
+  padding-bottom: $spacing-md;
+  border-bottom: 1px solid rgba($dark, 0.1);
+}
+
+.title {
+  font-size: $font-size-xl; // Variable SASS
+  font-weight: 700;
+  color: $secondary;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: $font-size-sm;
+  color: rgba($secondary, 0.6);
+  margin: 0;
+}
+
+.body {
+  color: $secondary;
+  line-height: 1.6;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: $spacing-sm;
+  margin-top: $spacing-lg;
+  padding-top: $spacing-md;
+  border-top: 1px solid rgba($dark, 0.1);
+}
+
+// Variantes - toujours encapsulées
+.primary {
+  background: $primary;
+  color: $secondary;
+
+  // Ciblage local uniquement
+  .title,
+  .body {
+    color: $secondary;
+  }
+}
+
+.dark {
+  background: $dark;
+  color: $light;
+
+  .title {
+    color: $primary;
+  }
+
+  .body {
+    color: rgba($light, 0.8);
+  }
+}
+
+// Responsive avec mixin SASS
+@include responsive(md) {
+  .card {
+    padding: $spacing-xl;
+  }
+}

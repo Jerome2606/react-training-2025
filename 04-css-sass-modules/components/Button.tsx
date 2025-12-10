@@ -21,7 +21,8 @@ export const Button = ({
     styles[variant],
     disabled && styles.disabled,
   ]
-    .filter(Boolean)
+    .filter(Boolean)  // ["button_abc123", "primary_xyz789", false].filter(Boolean)
+                      // → ["button_abc123", "primary_xyz789"]
     .join(" ");
 
   return (

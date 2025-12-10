@@ -186,7 +186,7 @@ const App = () => {
       <Button label="Cliquez" onClick={() => alert("Click!")} />
 
       {/* ❌ Erreur : label manquant */}
-      {/* <Button onClick={() => {}} /> */}
+       {/* <Button onClick={() => {}} />  */}
 
       {/* ❌ Erreur : type incorrect */}
       {/* <Button label={123} onClick={() => {}} /> */}

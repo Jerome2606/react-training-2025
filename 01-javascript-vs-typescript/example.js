@@ -4,7 +4,7 @@
 const user = { name: "Alice", age: 30 };
 
 // Cette erreur ne sera détectée qu'à l'exécution
-//user.name = 123; // Pas d'erreur à l'écriture!
+user.name = 123; // Pas d'erreur à l'écriture!
 
 function greet(person) {
   // Aucune garantie sur la structure de person

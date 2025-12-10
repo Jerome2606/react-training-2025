@@ -9,7 +9,7 @@ import { Playground } from './Playground'
 // ===============================================
 
 // Exemple: importez Counter depuis le dossier 10-usestate
-// import { Counter } from '../../../10-usestate/Counter'
+ import { Counter } from '../../../10-usestate/Counter'
 // import { Form } from '../../../10-usestate/Form';
 // import { TodoList } from '../../../10-usestate/TodoList';
 // import { UserDetail } from '../../../11-useeffect/FetchData';
@@ -18,8 +18,8 @@ import { Playground } from './Playground'
 // import { LifecycleDemo } from '../../../12-cycle-de-vie/LifecycleDemo';
 // import {AppExample} from '../../../14-usecontext/ThemeContext';
 
-import '../../../16-i18n/i18n'; // Initialize i18n
-import { TranslatedComponent } from '../../../16-i18n/TranslatedComponent';
+// import '../../../16-i18n/i18n'; // Initialize i18n
+// import { TranslatedComponent } from '../../../16-i18n/TranslatedComponent';
 
 // Ou copiez-collez directement votre composant ici:
 // import { useState } from 'react';
@@ -65,7 +65,7 @@ const USE_STRICT_MODE = false; // Changez à true pour activer StrictMode
 const App = (
   <Playground>
     {
-      // <Counter />
+       <Counter />
       // <Form />
       // <TodoList />
       // <UserDetail userId={1} />
@@ -73,7 +73,7 @@ const App = (
       // <SearchWithDebounce />
       // <LifecycleDemo />
       // <AppExample />
-      <TranslatedComponent />
+      // <TranslatedComponent />
     }
   </Playground>
 );

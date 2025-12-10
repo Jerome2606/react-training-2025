@@ -17,6 +17,8 @@ const elementCompiled = React.createElement(
   "Bonjour!"
 );
 
+// <h1 class="title">Bonjour!</h1> en HTML classique
+
 // ============================================================
 // RÈGLE 1 : Un seul élément racine
 // ============================================================
