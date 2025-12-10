@@ -16,29 +16,30 @@ const CITIES: string[] = [
 
 export const WeatherWidget = () => {
     // State variables
-    const [city, setCity] = useState("Brussels");
+    const [city, setCity] = useState<string>("Brussels");
     const [weather, setWeather] = useState<Weather | null>(null);
     const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
+    const [countdown, setCountdown] = useState<number>(30);
 
     // Additional state for loading and error handling
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
 
     // Function to fetch weather data from wttr.in
-    const fetchWeatherData = async (city: string) => {
-        const response = await fetch(`https://wttr.in/${city}?format=j1`);
+    const fetchWeatherData = async (cityCalled: string) => {
+        const response = await fetch(`https://wttr.in/${cityCalled}?format=j1`);
         if (!response.ok) {
             throw new Error("Erreur réseau");
         }
         const data = await response.json();
-        return {...data, city: city};
+        return {...data, city: cityCalled};
     };
 
-    const fetchWeather = async () => {
+    const fetchWeather = async (cityCalled: string) => {
         setLoading(true);
         setError(null);
         try {
-            const data = await fetchWeatherData(city);
+            const data = await fetchWeatherData(cityCalled);
             const currentCondition = data.current_condition[0];
             setWeather({
                 city: data.city,
@@ -50,23 +51,33 @@ export const WeatherWidget = () => {
         } catch (err) {
             setError("Impossible de récupérer les données météo.");
             setWeather(null);
+        } finally {
+            setLoading(false);
         }
-        setLoading(false);
     };
 
     // Fetch weather data when the component mounts and when the city changes
     useEffect(() => {
-        fetchWeather();
+        fetchWeather(city);
     }, [city]);
 
     // Set up an interval to refresh the weather data every 30 seconds
     useEffect(() => {
         const interval = setInterval(() => {
-            fetchWeather();
-        }, 30000); // 30 secondes
+            if (!city) return;
+            if (loading === true) return; // Avoid overlapping fetches
+
+            setCountdown((prev) => {
+                if (prev === 1) {
+                    fetchWeather(city);
+                    return 30;
+                }
+                return prev - 1;
+            });
+        }, 1000); // Every second
 
         return () => clearInterval(interval);
-    }, [city]);
+    }, [city, loading]);
 
   return (
     <div>
@@ -90,6 +101,7 @@ export const WeatherWidget = () => {
                 <p>Condition: {weather.condition}</p>
                 <p>Wind: {weather.wind} km/h</p>
                 {lastUpdate && (<p>Last update: {lastUpdate.toLocaleTimeString()}</p>)}
+                <p>Next update in: {countdown} seconds</p>
             </div>
         )}
     </div>
