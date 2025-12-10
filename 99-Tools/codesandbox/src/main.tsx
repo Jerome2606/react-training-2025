@@ -9,11 +9,11 @@ import { Playground } from './Playground'
 // ===============================================
 
 // Exemple: importez Counter depuis le dossier 10-usestate
- import { Counter } from '../../../10-usestate/Counter'
+//  import { Counter } from '../../../10-usestate/Counter'
 // import { Form } from '../../../10-usestate/Form';
 // import { TodoList } from '../../../10-usestate/TodoList';
 // import { UserDetail } from '../../../11-useeffect/FetchData';
-// import { UserList } from '../../../11-useeffect/FetchData';
+import { UserList } from '../../../11-useeffect/FetchData';
 // import { SearchWithDebounce } from '../../../11-useeffect/Timer';
 // import { LifecycleDemo } from '../../../12-cycle-de-vie/LifecycleDemo';
 // import {AppExample} from '../../../14-usecontext/ThemeContext';
@@ -65,11 +65,11 @@ const USE_STRICT_MODE = false; // Changez à true pour activer StrictMode
 const App = (
   <Playground>
     {
-       <Counter />
+      //  <Counter />
       // <Form />
       // <TodoList />
       // <UserDetail userId={1} />
-      // <UserList />
+      <UserList />
       // <SearchWithDebounce />
       // <LifecycleDemo />
       // <AppExample />

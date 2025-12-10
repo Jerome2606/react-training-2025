@@ -16,25 +16,29 @@ export const UserList = () => {
   useEffect(() => {
     // Fonction async dans useEffect
     const fetchUsers = async () => {
+      setLoading(true);
+      setTimeout(async() => {
       try {
-        setLoading(true);
         setError(null);
 
-        const response = await fetch(
-          "https://jsonplaceholder.typicode.com/users"
-        );
+        
+          const response = await fetch(
+            "https://jsonplaceholder.typicode.com/users"
+          );
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
 
-        const data = await response.json();
-        setUsers(data);
+          const data = await response.json();
+          setUsers(data);
+        
       } catch (err) {
         setError(err instanceof Error ? err.message : "Erreur inconnue");
       } finally {
         setLoading(false);
       }
+      }, 3000);
     };
 
     fetchUsers();
