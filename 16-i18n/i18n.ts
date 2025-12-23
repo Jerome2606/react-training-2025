@@ -44,7 +44,7 @@ i18n
     // defaultNS: 'common',
 
     interpolation: {
-      // React échappe déjà les valeurs
+      // React échappe déjà les valeurs XSS
       escapeValue: false,
 
       // Format des dates et nombres
