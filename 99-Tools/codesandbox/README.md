@@ -77,6 +77,45 @@ createRoot(document.getElementById('root')!).render(
 
 ## 📝 Exemples d'utilisation
 
+### 🎓 Pour le debug : ShoppingCart Demo (Dossier 19)
+
+Pour les démos de debugging et performance du dossier 19, utilisez le [ShoppingCartDemo.tsx](../../19-debug-performance/ShoppingCartDemo.tsx) :
+
+```tsx
+import {
+  ShoppingCartUnoptimized,
+  ShoppingCartOptimized,
+  ShoppingCartComparison
+} from '../../../19-debug-performance/ShoppingCartDemo';
+
+// Version 1 : Pour montrer les problèmes de performance
+createRoot(document.getElementById('root')!).render(
+  <Playground>
+    <ShoppingCartUnoptimized />
+  </Playground>
+)
+
+// Version 2 : Pour montrer les solutions d'optimisation
+createRoot(document.getElementById('root')!).render(
+  <Playground>
+    <ShoppingCartOptimized />
+  </Playground>
+)
+
+// Version 3 : Comparaison côte à côte
+createRoot(document.getElementById('root')!).render(
+  <Playground>
+    <ShoppingCartComparison />
+  </Playground>
+)
+```
+
+**Outils de démo** :
+1. Ouvrir React DevTools (F12 → Components/Profiler)
+2. Activer "Highlight updates" dans les settings
+3. Observer la console pour voir les logs de render
+4. Comparer les deux versions avec le Profiler
+
 ### Tester Counter.tsx
 
 ```tsx

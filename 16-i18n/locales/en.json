@@ -23,7 +23,7 @@
     "search": "Search for a product...",
     "noResults": "No products found",
     "addToCart": "Add to cart",
-    "price": "Price: {{price}} €",
+    "price": "Price: $ {{price}}",
     "items_zero": "No items",
     "items_one": "{{count}} item",
     "items_other": "{{count}} items"

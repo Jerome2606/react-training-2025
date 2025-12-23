@@ -7,7 +7,7 @@ function App() {
   return (
     <div style={{ padding: "2rem" }}>
       <header style={{ marginBottom: "2rem" }}>
-        <h1>Internationalisation avec React i18next</h1>
+        <h1>Internationalisation avec React i18next</h1> {/* Internationalisation avec React i18next */}
 
         {/* Sélecteur de langue */}
         <div style={{ marginTop: "1rem" }}>

@@ -96,3 +96,5 @@ export const DateExample = () => {
     </div>
   );
 };
+
+// TODO: ajouter un exemple pour la currency et formatage des montants

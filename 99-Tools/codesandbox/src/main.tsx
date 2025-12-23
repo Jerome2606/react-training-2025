@@ -13,13 +13,20 @@ import { Playground } from './Playground'
 // import { Form } from '../../../10-usestate/Form';
 // import { TodoList } from '../../../10-usestate/TodoList';
 // import { UserDetail } from '../../../11-useeffect/FetchData';
-import { UserList } from '../../../11-useeffect/FetchData';
+// import { UserList } from '../../../11-useeffect/FetchData';
 // import { SearchWithDebounce } from '../../../11-useeffect/Timer';
 // import { LifecycleDemo } from '../../../12-cycle-de-vie/LifecycleDemo';
 // import {AppExample} from '../../../14-usecontext/ThemeContext';
 
 // import '../../../16-i18n/i18n'; // Initialize i18n
 // import { TranslatedComponent } from '../../../16-i18n/TranslatedComponent';
+
+// Importer et rendre l'un des composants :
+//      - `<ShoppingCartUnoptimized />` - Pour montrer les problèmes
+//      - `<ShoppingCartOptimized />` - Pour montrer les solutions
+//      - `<ShoppingCartComparison />` - Pour comparer côte à côte
+// import {ShoppingCartUnoptimized} from '../../../19-debug-performance/ShoppingCartDemo';
+import {ShoppingCartOptimized} from '../../../19-debug-performance/ShoppingCartDemo';
 
 // Ou copiez-collez directement votre composant ici:
 // import { useState } from 'react';
@@ -65,15 +72,17 @@ const USE_STRICT_MODE = false; // Changez à true pour activer StrictMode
 const App = (
   <Playground>
     {
-      //  <Counter />
+      // <Counter />
       // <Form />
       // <TodoList />
       // <UserDetail userId={1} />
-      <UserList />
+      // <UserList />
       // <SearchWithDebounce />
       // <LifecycleDemo />
       // <AppExample />
       // <TranslatedComponent />
+      // <ShoppingCartUnoptimized />
+      <ShoppingCartOptimized />
     }
   </Playground>
 );
