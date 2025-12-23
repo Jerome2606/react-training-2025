@@ -24,3 +24,6 @@ npm install react-router-dom
 - `useParams` : Paramètres d'URL
 - `useSearchParams` : Query params
 - `Outlet` : Rendu des routes enfants
+
+
+TODO: mettre un exemple de récupération de useState, completer l'exemple fromProduct

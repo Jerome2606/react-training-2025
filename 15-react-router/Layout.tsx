@@ -29,6 +29,9 @@ export const Layout = () => {
         <NavLink to="/about" style={navLinkStyle}>
           À propos
         </NavLink>
+        <NavLink to="/blog" style={navLinkStyle}>
+          Blog
+        </NavLink>
         <NavLink to="/products" style={navLinkStyle}>
           Produits
         </NavLink>
@@ -44,7 +47,7 @@ export const Layout = () => {
 
       {/* Contenu des routes enfants */}
       <main style={{ padding: "20px" }}>
-        <Outlet />
+        <Outlet /> {/* Rendu du <Home /> pour "/" */}
       </main>
 
       {/* Footer */}

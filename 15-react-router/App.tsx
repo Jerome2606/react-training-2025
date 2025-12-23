@@ -10,6 +10,7 @@ import { Home, About, Dashboard, NotFound } from "./pages/Home";
 import { Products } from "./pages/Products";
 import { ProductDetail } from "./pages/ProductDetail";
 import { ProtectedRoute } from "./ProtectedRoute";
+import { Blog, BlogItem } from "./pages/jerome/Blog";
 
 function App() {
   return (
@@ -28,6 +29,13 @@ function App() {
             <Route index element={<Products />} />
             {/* Route avec paramètre dynamique */}
             <Route path=":productId" element={<ProductDetail />} />
+          </Route>
+
+          {/* Routes imbriquées */}
+          <Route path="blog">
+            <Route index element={<Blog />} />
+            {/* Route avec paramètre dynamique */}
+            <Route path=":blogId" element={<BlogItem />} />
           </Route>
 
           {/* Route protégée */}
